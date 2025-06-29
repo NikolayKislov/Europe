@@ -1,29 +1,20 @@
-{
-  badgeText: Digital Innovators,
-  h1First: We Build,
-  h1Second: Digital Experiences,
-  h1Third:  That Matter,
-  description: Transforming ideas into powerful digital solutions. Our team of expert developers crafts websites and applications that drive results and elevate your brand,
-  buttonLabel1: Meet our team,
-  buttonIcon1: i-heroicons-arrow-right-20-solid,
-  buttonLabel2: Our Portfolio,
-  buttonIcon2: i-heroicons-eye-20-solid,
-  stats: [
-  {
-    value: '250',
+badgeText: Digital Innovators
+h1First: We Build
+h1Second: Digital Experiences
+h1Third: That Matter
+description: Transforming ideas into powerful digital solutions. Our team of expert developers crafts websites and applications that drive results and elevate your brand
+buttonLabel1: Meet our team
+buttonIcon1: i-lucide-arrow-right
+buttonLabel2: Our Portfolio
+buttonIcon2: i-lucide-eye
+stats:
+  - value: '250'
     label: Projects
-  },
-  {
-    value: '98',
+  - value: '98'
     label: Clients
-  },
-  {
-    value: '15',
+  - value: '15'
     label: Awards
-  },
-]),
-image: https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80,
-cardIcon: i-heroicons-check-badge,
-cardTitle: Trusted by Industry Leaders,
-cardDescription: Award-winning web solutions since 2012,
-}
+image: https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80
+cardIcon: i-heroicons-check-badge
+cardTitle: Trusted by Industry Leaders
+cardDescription: Award-winning web solutions since 2012

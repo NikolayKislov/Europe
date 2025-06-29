@@ -3,8 +3,8 @@ import { defineCollection, defineContentConfig, z } from '@nuxt/content'
 export default defineContentConfig({
     collections: {
         mainAbout: defineCollection({
+            source: '**',
             type: 'data',
-            source: 'mainAbout/**.yml',
             schema: z.object({
                 badgeText: z.string(),
                 h1First: z.string(),
@@ -15,20 +15,12 @@ export default defineContentConfig({
                 buttonIcon1: z.string(),
                 buttonLabel2: z.string(),
                 buttonIcon2: z.string(),
-                stats: z.array([
-                    {
+                stats: z.array(
+                    z.object({
                         value: z.string(),
                         label: z.string()
-                    },
-                    {
-                        value: z.string(),
-                        label: z.string()
-                    },
-                    {
-                        value: z.string(),
-                        label: z.string()
-                    },
-                ]),
+                    })
+                ),
                 image: z.string(),
                 cardIcon: z.string(),
                 cardTitle: z.string(),

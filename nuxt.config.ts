@@ -12,4 +12,7 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     '@nuxt/ui'
   ],
+  content: {
+    yaml: {}
+  }
 })

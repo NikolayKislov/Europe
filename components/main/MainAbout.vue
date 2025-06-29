@@ -4,37 +4,37 @@
       <!-- Text content -->
       <div class="space-y-6">
         <UBadge variant="subtle" color="primary" class="w-fit">
-          <span class="text-sm font-semibold">Digital Innovators</span>
+          <span class="text-sm font-semibold">{{mainAbout?.badgeText}}</span>
         </UBadge>
 
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-          We Build <span class="text-primary">Digital Experiences</span> That Matter
+          {{mainAbout.h1First}} <span class="text-primary">{{mainAbout.h1Second}}</span> {{mainAbout.h1Third}}
         </h1>
 
         <p class="text-lg text-gray-600 dark:text-gray-300">
-          Transforming ideas into powerful digital solutions. Our team of expert developers crafts websites and applications that drive results and elevate your brand.
+          {{mainAbout.description}}
         </p>
 
         <div class="flex flex-wrap gap-4 pt-4">
           <UButton
               size="xl"
               color="primary"
-              label="Meet our team"
-              trailing-icon="i-heroicons-arrow-right-20-solid"
+              :label="mainAbout.buttonLabel1"
+              :trailing-icon="mainAbout.buttonIcon1"
               class="px-8 w-full md:w-fit"
           />
           <UButton
               size="xl"
               variant="outline"
-              label="Our Portfolio"
-              trailing-icon="i-heroicons-eye-20-solid"
+              :label="mainAbout.buttonLabel2"
+              :trailing-icon="mainAbout.buttonIcon2"
               class="px-8 w-full md:w-fit"
           />
         </div>
 
         <!-- Stats -->
         <div class="grid grid-cols-3 md:grid-cols-3 gap-4 pt-8">
-          <div v-for="stat in stats" :key="stat.label" class="space-y-1 flex flex-col lg:items-start items-center ">
+          <div v-for="stat in mainAbout.stats" :key="stat.label" class="space-y-1 flex flex-col lg:items-start items-center ">
             <h3 class="text-3xl font-bold text-primary">{{ stat.value }}+</h3>
             <p class="text-gray-500 dark:text-gray-400">{{ stat.label }}</p>
           </div>
@@ -45,7 +45,7 @@
       <div class="relative">
         <div class="relative rounded-xl overflow-hidden aspect-[4/3] shadow-2xl">
           <img
-              src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+              :src="mainAbout.image"
               alt="Team working on web development"
               class="object-cover w-full h-full"
           >
@@ -59,13 +59,13 @@
         >
           <div class="flex items-center gap-4">
             <UIcon
-                name="i-heroicons-check-badge"
+                :name="mainAbout.cardIcon"
                 class="w-12 h-12 text-primary"
             />
             <div>
-              <h3 class="font-bold text-lg">Trusted by Industry Leaders</h3>
+              <h3 class="font-bold text-lg">{{mainAbout.cardTitle}}</h3>
               <p class="text-gray-500 text-sm">
-                Award-winning web solutions since 2012
+                {{mainAbout.cardDescription}}
               </p>
             </div>
           </div>
@@ -81,6 +81,8 @@ const stats = [
   { value: "98", label: "Clients" },
   { value: "15", label: "Awards" },
 ];
+
+const { data: mainAbout } = await useAsyncData('mainAbout', () => queryCollection('mainAbout').first())
 </script>
 
 <style scoped>
