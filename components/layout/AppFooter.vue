@@ -145,8 +145,8 @@ const socialLinks = [
 ];
 
 const legalLinks = [
-  { label: 'Privacy Policy', to: '/privacy' },
-  { label: 'Terms of Service', to: '/terms' },
-  { label: 'Cookie Policy', to: '/cookies' }
+  { label: 'Privacy Policy', to: '/' },
+  { label: 'Terms of Service', to: '/' },
+  { label: 'Cookie Policy', to: '/' }
 ];
 </script>
