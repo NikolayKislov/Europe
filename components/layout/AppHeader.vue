@@ -39,35 +39,35 @@ const navItems = [
   },
   {
     label: "Services",
-    to: "/services",
+    to: "/",
     icon: "i-heroicons-wrench-screwdriver",
     defaultOpen: true,
     children: [
       {
         label: "Development",
-        to: "/services/web",
+        to: "/",
         icon: "i-lucide-code"
       },
       {
         label: "Consulting",
-        to: "/services/consulting",
+        to: "/",
         icon: "i-lucide-messages-square"
       },
       {
         label: "Training",
-        to: "/services/training",
+        to: "/",
         icon: "i-lucide-graduation-cap"
       }
     ]
   },
   {
     label: "About",
-    to: "/about",
+    to: "/",
     icon: "i-heroicons-information-circle"
   },
   {
     label: "Contact",
-    to: "/contact",
+    to: "/",
     icon: "i-heroicons-envelope"
   }
 ];
